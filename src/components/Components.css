@@ -1,0 +1,389 @@
+/* Expense Entry Form */
+.expense-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #555;
+  font-size: 0.95em;
+}
+
+.form-group input,
+.form-group select {
+  padding: 12px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1em;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Buttons */
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-success {
+  background: #4CAF50;
+  color: white;
+}
+
+.btn-success:hover {
+  background: #45a049;
+}
+
+.btn-reset {
+  background: #ff4757;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.1em;
+  padding: 15px 30px;
+}
+
+.btn-reset:hover {
+  background: #ff3344;
+  transform: scale(1.05);
+}
+
+.btn-small {
+  padding: 8px 16px;
+  font-size: 0.9em;
+}
+
+.reset-icon {
+  font-size: 1.2em;
+}
+
+/* Participant Section */
+.participant-section {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.add-expense-form {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.add-expense-form h3 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr auto;
+  gap: 10px;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.participants-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.participant-card {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+}
+
+.participant-name-input {
+  width: 100%;
+  padding: 8px;
+  font-size: 1.1em;
+  font-weight: 600;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.participant-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 15px;
+  padding: 10px;
+  background: white;
+  border-radius: 8px;
+}
+
+.stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stat.positive {
+  color: #4CAF50;
+}
+
+.stat.negative {
+  color: #ff4757;
+}
+
+.stat-label {
+  font-weight: 500;
+  color: #666;
+}
+
+.stat-value {
+  font-weight: 600;
+}
+
+.participant-expenses {
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+.participant-expenses h4 {
+  font-size: 0.95em;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.no-expenses {
+  color: #999;
+  font-style: italic;
+  font-size: 0.9em;
+  text-align: center;
+  padding: 8px;
+}
+
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 8px;
+  background: white;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  font-size: 0.9em;
+}
+
+.btn-remove-small {
+  background: none;
+  border: none;
+  color: #ff4757;
+  font-size: 1.2em;
+  cursor: pointer;
+  padding: 0 5px;
+}
+
+.btn-remove-small:hover {
+  color: #ff3344;
+}
+
+/* Settlement Display */
+.settlement-display {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.summary-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.stat-card {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.stat-card .stat-label {
+  display: block;
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.stat-card .stat-value {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #333;
+}
+
+.settlements-list {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.settlements-list h3 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.settlement-items {
+  list-style: none;
+  padding: 0;
+}
+
+.settlement-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  font-size: 1.1em;
+}
+
+.settlement-item .from,
+.settlement-item .to {
+  font-weight: 600;
+  color: #333;
+}
+
+.settlement-item .arrow {
+  color: #667eea;
+  font-size: 1.2em;
+}
+
+.settlement-item .amount {
+  margin-left: auto;
+  font-weight: 700;
+  color: #4CAF50;
+  background: #e8f5e9;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.no-settlements {
+  text-align: center;
+  color: #4CAF50;
+  font-size: 1.2em;
+  padding: 20px;
+  background: #e8f5e9;
+  border-radius: 8px;
+}
+
+.balance-summary {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+}
+
+.balance-summary h3 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.balance-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.balance-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 5px;
+}
+
+.balance-row .name {
+  font-weight: 500;
+  color: #333;
+}
+
+.balance-row .amount {
+  font-weight: 600;
+}
+
+.balance-row .amount.positive {
+  color: #4CAF50;
+}
+
+.balance-row .amount.negative {
+  color: #ff4757;
+}
+
+/* Chart Components */
+.chart-container {
+  height: 300px;
+  width: 100%;
+  position: relative;
+}
+
+.chart-placeholder {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+  border-radius: 10px;
+  color: #999;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .participants-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .summary-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .settlement-item {
+    flex-wrap: wrap;
+  }
+  
+  .settlement-item .amount {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
